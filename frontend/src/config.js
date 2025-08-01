@@ -7,7 +7,7 @@ const getApiBaseUrl = () => {
   // In production (Vercel), use the Railway backend URL
   if (process.env.NODE_ENV === 'production') {
     // This will be set as an environment variable in Vercel
-    return process.env.REACT_APP_API_URL || 'https://rmr-backend.up.railway.app/api/data';
+    return process.env.REACT_APP_API_URL || 'https://rmr-dashboard-production.up.railway.app/api/data';
   }
   
   // In development, use localhost
