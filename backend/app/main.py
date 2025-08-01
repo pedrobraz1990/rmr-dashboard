@@ -35,12 +35,17 @@ app.include_router(data_controller.router, prefix="/api/data", tags=["data"])
 @app.get("/")
 async def root():
     """Root endpoint"""
-    return {"message": "ESG Dashboard API is running"}
+    return {"message": "ESG Dashboard API is running", "status": "healthy"}
 
 @app.get("/health")
 async def health_check():
     """Health check endpoint"""
     return {"status": "healthy", "service": "ESG Dashboard API"}
+
+@app.get("/test")
+async def test_endpoint():
+    """Simple test endpoint that doesn't depend on data files"""
+    return {"message": "Test endpoint working", "timestamp": "2024-01-01"}
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True) 
