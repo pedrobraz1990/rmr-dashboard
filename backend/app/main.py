@@ -18,7 +18,12 @@ app = FastAPI(
 # Configure CORS for frontend communication
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # React development server
+    allow_origins=[
+        "http://localhost:3000",  # React development server
+        "https://rmr-dashboard.vercel.app",  # Vercel frontend (we'll update this)
+        "https://*.vercel.app",  # Any Vercel subdomain
+        "https://*.railway.app"  # Any Railway subdomain
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
