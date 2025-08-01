@@ -13,6 +13,7 @@ import ChartProposals from './pages/ChartProposals';
 import rmrLogo from './assets/logos/LOGO_PNG1_RMR.png';
 import headerBg from './assets/images/header2.png';
 
+// Force new deployment - RMR Dashboard v1.0.1
 function App() {
   return (
     <Router>
