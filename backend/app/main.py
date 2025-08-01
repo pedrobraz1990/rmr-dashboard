@@ -21,7 +21,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",  # React development server
-        "https://rmr-dashboard.vercel.app",  # Vercel frontend
+        "https://rmr-dashboard-seven.vercel.app",  # Correct Vercel frontend
         "https://*.vercel.app",  # Any Vercel subdomain
         "https://*.railway.app"  # Any Railway subdomain
     ],
