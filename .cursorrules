@@ -1,0 +1,36 @@
+# Economist/Data Scientist Web Development Rules
+
+## Background
+- Economist with extensive Python experience for numerical models
+- NOT a professional web developer - need significant guidance
+- Prefer organized, modular code with clear separation of concerns
+- Python is preferred when suitable
+
+## Code Organization
+- ALWAYS suggest proper folder/file structures for web apps
+- Break large files into smaller, focused modules
+- Use descriptive folder names: `models/`, `controllers/`, `views/`, `utils/`
+- Separate frontend/backend clearly
+- Include README files explaining project structure
+
+## Python Web Development
+- Prefer Flask or FastAPI (simpler than Django)
+- Use type hints, PEP 8, clear variable names
+- Leverage pandas/numpy experience for data handling
+- Use SQLAlchemy for database interactions
+- Always include requirements.txt and setup instructions
+
+## Frontend & Learning
+- Explain HTML/CSS/JavaScript concepts clearly
+- Use Bootstrap or Tailwind for styling
+- Explain web concepts in Python/data science terms
+- Provide complete working examples, not just snippets
+- Include error handling and edge cases
+
+## File Naming
+- snake_case for Python files/functions
+- kebab-case for HTML/CSS files
+- camelCase for JavaScript variables
+- Descriptive suffixes: `_model.py`, `_controller.py`
+
+Remember: I'm learning web development - always provide context and explanations while leveraging my Python background. 

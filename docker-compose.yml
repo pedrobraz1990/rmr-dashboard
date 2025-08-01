@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  rmr-dashboard:
+    build: .
+    ports:
+      - "3000:3000"  # Frontend
+      - "8000:8000"  # Backend API
+    volumes:
+      - ./data:/app/data  # Mount data directory for easy updates
+    environment:
+      - PYTHONPATH=/app/backend
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3 

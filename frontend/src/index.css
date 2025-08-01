@@ -1,0 +1,79 @@
+/* Import RMR Design System Stylesheets */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import './styles/variables.css';
+@import './styles/components.css';
+@import './styles/responsive.css';
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--rmr-font-family);
+  font-size: var(--rmr-text-base);
+  font-weight: var(--rmr-font-normal);
+  line-height: 1.6;
+  color: var(--rmr-gray-800);
+  background-color: var(--rmr-bg-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: var(--rmr-font-mono);
+  background-color: var(--rmr-gray-100);
+  padding: var(--rmr-space-1) var(--rmr-space-2);
+  border-radius: var(--rmr-radius-sm);
+  font-size: var(--rmr-text-sm);
+}
+
+/* Reset and Base Elements */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--rmr-space-4) 0;
+  font-weight: var(--rmr-font-semibold);
+  line-height: 1.2;
+  color: var(--rmr-gray-800);
+}
+
+h1 { font-size: var(--rmr-text-4xl); }
+h2 { font-size: var(--rmr-text-3xl); }
+h3 { font-size: var(--rmr-text-2xl); }
+h4 { font-size: var(--rmr-text-xl); }
+h5 { font-size: var(--rmr-text-lg); }
+h6 { font-size: var(--rmr-text-base); }
+
+p {
+  margin: 0 0 var(--rmr-space-4) 0;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--rmr-primary);
+  text-decoration: none;
+  transition: color var(--rmr-transition-normal);
+}
+
+a:hover {
+  color: var(--rmr-secondary);
+  text-decoration: underline;
+}
+
+/* Focus Management for Accessibility */
+*:focus {
+  outline: 2px solid var(--rmr-primary);
+  outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure focus is visible for keyboard users */
+*:focus-visible {
+  outline: 2px solid var(--rmr-primary);
+  outline-offset: 2px;
+} 
